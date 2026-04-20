@@ -1,0 +1,29 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Environment — NEVER commit this
+.env
+.env.example
+.envv
+
+# Data — too large for git
+data/chroma_db/
+data/uploads/
+data/sample_docs/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp

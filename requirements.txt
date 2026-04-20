@@ -1,0 +1,50 @@
+# ============================================================
+# RAG Assistant — Final Requirements
+# Python 3.11 | Windows CPU
+#
+# INSTALL ORDER (strictly):
+#   1. Install VC++ Redist: https://aka.ms/vs/17/release/vc_redist.x64.exe
+#      Then RESTART your PC.
+#   2. pip install torch==2.4.0+cpu --index-url https://download.pytorch.org/whl/cpu --no-cache-dir
+#   3. pip install -r requirements.txt
+# ============================================================
+
+# ── LangChain ecosystem ───────────────────────────────────────
+langchain==0.3.14
+langchain-core==0.3.29
+langchain-community==0.3.14
+langchain-groq==0.2.3
+langchain-huggingface==0.1.2
+langchain-chroma==0.1.4
+langchain-text-splitters==0.3.4
+
+# ── Groq ─────────────────────────────────────────────────────
+groq
+
+# ── Embeddings & Reranking ────────────────────────────────────
+# torch installed separately — DO NOT add here
+sentence-transformers==2.7.0     # last stable before the broken backend rewrite
+transformers==4.40.2             # pinned — newer versions break on Windows CPU
+
+# ── Vector DB ─────────────────────────────────────────────────
+chromadb==0.5.3
+
+# ── PDF ───────────────────────────────────────────────────────
+pypdf==4.3.1
+pdfplumber==0.11.4
+
+# ── API ───────────────────────────────────────────────────────
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+
+# ── Cache ─────────────────────────────────────────────────────
+redis==5.0.8
+
+# ── Config & Utils ────────────────────────────────────────────
+python-dotenv==1.0.1
+pydantic==2.8.2
+pydantic-settings==2.4.0
+tiktoken==0.7.0
+rich==13.8.0
+pypdf==4.3.1
