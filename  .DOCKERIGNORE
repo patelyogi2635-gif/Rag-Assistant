@@ -1,0 +1,15 @@
+# .dockerignore — keep image lean
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+.git/
+.gitignore
+*.md
+data/chroma_db/
+data/uploads/
+*.log
+.pytest_cache/
+.DS_Store
+Thumbs.db
