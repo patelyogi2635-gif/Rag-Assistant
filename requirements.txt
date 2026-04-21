@@ -1,13 +1,4 @@
-# ============================================================
-# RAG Assistant — Final Requirements
-# Python 3.11 | Windows CPU
-#
-# INSTALL ORDER (strictly):
-#   1. Install VC++ Redist: https://aka.ms/vs/17/release/vc_redist.x64.exe
-#      Then RESTART your PC.
-#   2. pip install torch==2.4.0+cpu --index-url https://download.pytorch.org/whl/cpu --no-cache-dir
-#   3. pip install -r requirements.txt
-# ============================================================
+
 
 # ── LangChain ecosystem ───────────────────────────────────────
 langchain==0.3.14
@@ -21,10 +12,6 @@ langchain-text-splitters==0.3.4
 # ── Groq ─────────────────────────────────────────────────────
 groq
 
-# ── Embeddings & Reranking ────────────────────────────────────
-# torch installed separately — DO NOT add here
-sentence-transformers==2.7.0     # last stable before the broken backend rewrite
-transformers==4.40.2             # pinned — newer versions break on Windows CPU
 
 # ── Vector DB ─────────────────────────────────────────────────
 chromadb==0.5.3
@@ -47,7 +34,9 @@ pydantic==2.8.2
 pydantic-settings==2.4.0
 tiktoken==0.7.0
 rich==13.8.0
-pypdf==4.3.1
 
+
+sentence-transformers==3.0.1
+transformers==4.40.2
 onnxruntime==1.18.1
 optimum[onnxruntime]==1.21.0
