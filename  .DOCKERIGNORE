@@ -13,3 +13,7 @@ data/uploads/
 .pytest_cache/
 .DS_Store
 Thumbs.db
+data/
+*.pt
+*.bin
+*.onnx
