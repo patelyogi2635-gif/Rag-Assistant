@@ -48,3 +48,7 @@ pydantic-settings==2.4.0
 tiktoken==0.7.0
 rich==13.8.0
 pypdf==4.3.1
+
+onnxruntime==1.18.1
+optimum[onnxruntime]==1.21.0
+sentence-transformers==3.0.1

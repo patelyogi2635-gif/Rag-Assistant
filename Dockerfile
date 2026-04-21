@@ -5,20 +5,20 @@
 # ============================================================
 
 # ── Stage 1: Builder ─────────────────────────────────────────
+# ── Stage 1: Builder ──────────────────────────────────────────
 FROM python:3.10-slim AS builder
 
 WORKDIR /build
 
+# No gcc/g++ needed without torch compilation
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    gcc g++ git \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 RUN pip install --upgrade pip && \
-    pip install --prefix=/install --no-cache-dir \
-        torch==2.4.0+cpu \
-        --index-url https://download.pytorch.org/whl/cpu && \
     pip install --prefix=/install --no-cache-dir -r requirements.txt
+
 
 # ── Stage 2: Runtime ─────────────────────────────────────────
 FROM python:3.10-slim AS runtime
