@@ -358,7 +358,7 @@ rag-assistant/
 ### Step 1 — Clone
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/rag-assistant.git
+git clone https://github.com/patelyogi2635/rag-assistant.git
 cd rag-assistant
 ```
 
